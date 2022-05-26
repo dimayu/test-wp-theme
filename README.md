@@ -1,28 +1,5 @@
-# gulp-scss-starter
+# test-wp-theme
 
-![License](https://img.shields.io/github/license/andreyalexeich/gulp-scss-starter)
-![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-scss-starter.svg?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-scss-starter.svg?style=social)<br>
-<a href="https://qiwi.com/n/ANDREYALEXEICH"><img src="https://img.shields.io/badge/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D0%B8%D0%B2%D0%BE-Qiwi-orange?style=for-the-badge&logo=qiwi"></a>
-
-
-## :fire: Особенности
-* именование классов по [БЭМ](https://ru.bem.info/)
-* используется БЭМ-структура
-* используется препроцессор [SCSS](https://sass-lang.com/)
-* используется транспайлер [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах
-* используется [Webpack](https://webpack.js.org/) для сборки JavaScript-модулей
-* используется жёсткий кодгайд
-* используется проверка кода на ошибки перед коммитом
-
-## :hammer_and_wrench: Установка
-* установите [NodeJS](https://nodejs.org/en/)
-* установите глобально:
-    * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
-    * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
-    * [Bem Tools](https://www.npmjs.com/package/bem-tools-core): ```npm i -g bem-tools-core```
-* скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/andreyalexeich/gulp-scss-starter.git```
-* перейдите в скачанную папку со сборкой: ```cd gulp-scss-starter```
 * введите ```yarn set version berry```
 * скачайте необходимые зависимости: ```yarn```
 * чтобы начать работу, введите команду: ```yarn run dev``` (режим разработки)
@@ -158,22 +135,3 @@ svg use {
   <path d="M4.90918 4.04542L13.091 9.54088L4.90918 14.9545L4.90918 4.04542Z"/>
 </svg> 
 ```
-
-### Сторонние библиотеки
-* все сторонние библиотеки устанавливаются в папку ```node_modules```
-    * для их загрузки воспользуйтеcь командой ```yarn add package_name``` (например, ```yarn add jquery```)
-    * для подключения JS-файлов библиотек импортируйте их в самом начале JS-файла БЭМ-блока (то есть тот БЭМ-блок, который использует скрипт), например:
-    ```javascript
-    import $ from "jquery";
-    ```
-    * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
-    * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
-
-## :point_right: Нужен SCSS + Pug?
-Используйте [эту](https://github.com/andreyalexeich/gulp-pug-starter/) сборку.
-
-## :yellow_heart: Нравится проект?
-Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-scss-starter/issues), ставьте звёздочку в правом верхнем углу, [задонатьте](https://qiwi.com/n/ANDREYALEXEICH) мне на пиво :beer:
-
-## :envelope: Контакты
-По всем вопросам пишите в [Telegram](https://t.me/andreyalexeich)
