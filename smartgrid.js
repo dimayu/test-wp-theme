@@ -6,13 +6,13 @@ let settings = {
     offset: '16px',
     mobileFirst: false,
     container: {
-        maxWidth: '1170px',
-        fields: '135px'
+        maxWidth: '1400px',
+        fields: '200px'
     },
     breakPoints: {
         lm: {
             width: '1280px',
-            fields: '50px'
+            fields: '100px'
         },
         md: {
             width: '940px',
@@ -20,11 +20,11 @@ let settings = {
         },
         sm: {
             width: '780px',
-            fields: '15px'
+            fields: '25px'
         },
         xxs: {
-            width: '440px',
-            fields: '10px'
+            width: '375px',
+            fields: '20px'
         }
     }
 };

@@ -1,7 +1,6 @@
-@import "base/_fonts.scss";
+@import "base/_general.scss";
 @import "smart-grid.scss";
 
-@include reset();
 @import "../blocks/modules/faq/faq.scss";
 @import "../blocks/modules/modal/modal.scss";
 @import "../blocks/modules/menu/menu.scss";

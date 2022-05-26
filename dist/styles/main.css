@@ -1,0 +1,473 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.faq__icon {
+  width: 20px;
+  height: 15px;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.faq__item {
+  background: #eee;
+  font-weight: bold;
+  font-size: 120%;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.faq__item__hidden {
+  background: #ddd;
+  display: none;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.modal,
+.modal-box {
+  z-index: 900;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0, 0, 0.3, 1.6);
+}
+
+.modal-body {
+  background: #eceff1;
+  padding: 60px 40px;
+}
+
+/* Close Button */
+
+.js-close-modal {
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Animation */
+
+@keyframes modalbox {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.js-open-modal {
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #fff;
+  padding: 20px 40px;
+  transition: ease 0.2s;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.js-open-modal:hover {
+  padding: 20px 60px;
+}
+
+.mobile-nav-button {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: 35px;
+  width: 35px;
+  height: 30px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav-button .mobile-nav-button__line {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  transition: 1s ease;
+  background: #000;
+}
+
+.mobile-nav-button .mobile-nav-button__line:nth-of-type(2) {
+  margin: 0.5rem 0;
+}
+
+.mobile-nav-button .mobile-nav-button__line--1 {
+  position: absolute;
+  top: 13px;
+  transform: rotate(45deg);
+}
+
+.mobile-nav-button .mobile-nav-button__line--2 {
+  display: none;
+}
+
+.mobile-nav-button .mobile-nav-button__line--3 {
+  position: absolute;
+  top: 13px;
+  transform: rotate(135deg);
+}
+
+.mobile-menu {
+  display: block;
+  position: absolute;
+  z-index: 9998;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  transition: 0.6s ease;
+  background: red;
+  opacity: 0;
+}
+
+.mobile-menu ul {
+  position: relative;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+.mobile-menu ul li {
+  list-style: none;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.mobile-menu ul li a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease;
+  background: #000;
+}
+
+.mobile-menu ul li a:hover {
+  color: #fff;
+}
+
+.mobile-menu ul li a:hover::after {
+  right: 0;
+}
+
+.mobile-menu--open {
+  right: 0;
+  opacity: 1;
+}
+
+/* Made by Jimmy Gillam */
+
+/* Checkmark style starts */
+
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 120px;
+  }
+}
+
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 120px;
+  }
+}
+
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+
+  100% {
+    height: 120px;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #000;
+  transition: border-color ease 0.2s;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox::before,
+.checkbox::after {
+  content: " ";
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 0;
+  transition: opacity ease 0.5;
+  background-color: #34b93d;
+  transform-origin: left top;
+  border-radius: 5px;
+}
+
+.checkbox::before {
+  top: 72px;
+  left: 41px;
+  box-shadow: 0 0 0 5px #fff;
+  transform: rotate(-135deg);
+}
+
+.checkbox::after {
+  top: 37px;
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+input[type=checkbox]:checked + .checkbox,
+.checkbox.checked {
+  border-color: #34b93d;
+}
+
+input[type=checkbox]:checked + .checkbox::after,
+.checkbox.checked::after {
+  height: 50px;
+  animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+
+input[type=checkbox]:checked + .checkbox::before,
+.checkbox.checked::before {
+  height: 120px;
+  animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+.tab {
+  cursor: pointer;
+}
+/*# sourceMappingURL=maps/main.css.map */
