@@ -27,87 +27,15 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 
-<section class="section-warning">
-    <div class="wrapper">
-        <div class="section-warning__items">
-            <div class="section-warning__items__item section-warning__items__item--warn">
-                <svg>
-                    <use xlink:href="img/sprites/sprite.svg#alert"></use>
-                </svg>
-                <span>You are not protected</span>
-            </div>
-            <div class="section-warning__items__item">
-                <span>Your IP Address: 107.3.176.194</span>
-            </div>
-            <div class="section-warning__items__item">
-                <span>Your ISP: Comcast Cable</span>
-            </div>
-            <a href="#" class="section-warning__items__item section-warning__items__item--link">
-                <span>Learn More ›</span>
-            </a>
-        </div>
-    </div>
-    <button class="btn--close-warning">
-        <svg>
-            <use xlink:href="img/sprites/sprite.svg#close"></use>
-        </svg>
-    </button>
-</section>
-<header class="header">
-    <div class="wrapper">
-        <div class="header__items">
-            <div class="header__items__item logo">
-                <a href="#" class="logo__link"><h1>Company Name</h1></a>
-            </div>
-            <div class="header__items__item">
-                <nav>
-                    <ul class="nav-top">
-                        <li class="sub-menu-parent">
-                            <a href="#">WHY US</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Sub Item 1</a></li>
-                                <li><a href="#">Sub Item 2</a></li>
-                                <li><a href="#">Sub Item 3</a></li>
-                                <li><a href="#">Sub Item 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">VPN APPS</a></li>
-                        <li class="sub-menu-parent">
-                            <a href="#">SUPPORT</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Sub Item 1</a></li>
-                                <li><a href="#">Sub Item 2</a></li>
-                                <li><a href="#">Sub Item 3</a></li>
-                                <li><a href="#">Sub Item 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu-parent">
-                            <a href="#">Resources</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Sub Item 1</a></li>
-                                <li><a href="#">Sub Item 2</a></li>
-                                <li><a href="#">Sub Item 3</a></li>
-                                <li><a href="#">Sub Item 4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header__items__item btns">
-                <button class="btn btn--transparent">LOG IN</button>
-                <button class="btn btn--color">GET STARTED</button>
-            </div>
-        </div>
-    </div>
-</header>
+
+@@include("../blocks/modules/section-warning/section-warning.html")
+@@include("../blocks/modules/header/header.html")
 <div class="main-post__wrapper">
     <div class="wrapper">
         <div class="main-post post">
@@ -115,20 +43,22 @@
                 <img src="img/pic.jpg" alt="pic" width="600px" height="400px">
             </div>
             <div class="post__text main-post__text">
-                <h2 class="post__text--title">TV Addons: Legal battle against Canadian media giants demonstrates severe
-                    consequences facing developers accused of copyright infringement
-                </h2>
-                <div class="main-post__text--desc">
+                <a href="#">
+                    <h2 class="post__text--title">TV Addons: Legal battle against Canadian media giants demonstrates severe
+                        consequences facing developers accused of copyright infringement
+                    </h2>
+                </a>
+                <div class="post__text--desc">
                     <div class="name">Danica Sergison</div>
                     <div class="data">JUL 08, 2018</div>
                 </div>
-                <div class="main-post__text--tags">
+                <div class="post__text--tags">
                     <a href="#">Copyright,</a>
                     <a href="#">News,</a>
                     <a href="#">Open Source,</a>
                     <a href="#">Privacy</a>
                 </div>
-                <div class="main-post__text--comments">
+                <div class="post__text--comments">
                     <svg>
                         <use xlink:href="img/sprites/sprite.svg#comment"></use>
                     </svg>
@@ -136,54 +66,49 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="block-tags">
-    <div class="wrapper">
-        <div class="block-tags__items">
-            <ul class="block-tags__items__item block-tags__items__item--nav">
-                <li>TAGS:</li>
-                <li><a href="#">bitcoin</a></li>
-                <li><a href="#">bittorrent</a></li>
-                <li><a href="#">irc</a></li>
-                <li><a href="#">news</a></li>
-                <li><a href="#">privacy</a></li>
-                <li><a href="#">programming</a></li>
-                <li><a href="#">security</a></li>
-            </ul>
-            <div class="block-tags__items__item block-tags__items__item--links">
-                <a href="#">team</a>
-                <a href="#">contact</a>
-            </div>
+        <div class="search main-post__search">
+            <label for="search" class="search--label">
+                <svg>
+                    <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+            </label>
+            <input type="text"
+                   name="search"
+                   id="search"
+                   placeholder="Search blog"
+                   class="search--input">
         </div>
     </div>
 </div>
+@@include("../blocks/modules/block-tags/block-tags.html")
 <div class="main">
     <div class="wrapper">
         <div class="main__items">
-            <div class="main__items__item">
+            <div class="main__items__item main__items__item--posts">
                 <div class="posts">
-                    <h2>Recent posts</h2>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <h2 class="posts__title">Recent posts</h2>
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-1.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
-                                Broken Promises
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
+                                    Broken Promises
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Derek Zimmer</div>
                                 <div class="data">JUL 25, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Networking,</a>
                                 <a href="#">Open Source,</a>
                                 <a href="#">Privacy,</a>
                                 <a href="#">Security</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -191,18 +116,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-2.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">How to get cheaper flights using a VPN
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">How to get cheaper flights using a VPN
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Jayson</div>
                                 <div class="data">JUL 24, 2018</div>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -210,23 +137,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-3.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Chris Miller</div>
                                 <div class="data">JUL 22, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Net Neutrality,</a>
                                 <a href="#">News</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -234,26 +163,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-1.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
-                                Broken Promises
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
+                                    Broken Promises
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Derek Zimmer</div>
                                 <div class="data">JUL 25, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Networking,</a>
                                 <a href="#">Open Source,</a>
                                 <a href="#">Privacy,</a>
                                 <a href="#">Security</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -261,18 +192,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-2.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">How to get cheaper flights using a VPN
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">How to get cheaper flights using a VPN
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Jayson</div>
                                 <div class="data">JUL 24, 2018</div>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -280,23 +213,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-3.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Chris Miller</div>
                                 <div class="data">JUL 22, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Net Neutrality,</a>
                                 <a href="#">News</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -307,7 +242,7 @@
                     <a href="#" class="btn btn--transparent">older posts</a>
                 </div>
             </div>
-            <div class="main__items__item">
+            <div class="main__items__item main__items__item--aside">
                 <aside class="aside">
                     <div class="search">
                         <label for="search" class="search--label">
@@ -328,7 +263,7 @@
                             </svg>
                             <h5>Announcements</h5>
                         </div>
-                        <ul class="aside-block--list">
+                        <ul class="aside-block__list">
                             <li class="aside-block__list--item">
                                 <a href="#">Upcoming Changes (Live Chat, Less Censorship, More Access)</a>
                             </li>
@@ -378,193 +313,15 @@
                     </div>
                     <div class="aside__tags">
                         <h5>Tag cloud</h5>
-                        <img src="img/image-tag.jpg" alt="pic" width="324px" height="309px">
+                        <img src="img/image-tags.jpg" alt="pic" width="324px" height="309px">
                     </div>
                 </aside>
             </div>
         </div>
     </div>
+    @@include("../blocks/modules/block-stock/block-stock.html")
 </div>
-<section class="block-stock">
-    <div class="wrapper">
-        <h2 class="block-stock__title">Sign up today – 7 day money back guarantee</h2>
-        <div class="block-stock__items">
-            <div class="block-stock__items__item">
-                <h6 class="block-stock__items__item--name">
-                    MONTHLY
-                </h6>
-                <div class="block-stock__items__item--price">
-                    <span>$</span>
-                    <span>6.95</span>
-                    <span>/mo.</span>
-                </div>
-                <div class="block-stock__items__item--discount">
-                    Includes all VPN features.
-                </div>
-                <a href="#" class="btn btn--transparent">SIGN UP</a>
-            </div>
-            <div class="block-stock__items__item">
-                <h6 class="block-stock__items__item--name">
-                    Two Years
-                </h6>
-                <div class="block-stock__items__item--price">
-                    <span>$</span>
-                    <span>2.91</span>
-                    <span>/mo.</span>
-                </div>
-                <div class="block-stock__items__item--discount">
-                    <span class="price-old">$166.80</span>
-                    $69.95 per two years
-                    <p class="discount-save">Save 58%*</p>
-                </div>
-                <a href="#" class="btn btn--color">SIGN UP</a>
-            </div>
-            <div class="block-stock__items__item">
-                <h6 class="block-stock__items__item--name">
-                    YEARLY
-                </h6>
-                <div class="block-stock__items__item--price">
-                    <span>$</span>
-                    <span>3.33</span>
-                    <span>/mo.</span>
-                </div>
-                <div class="block-stock__items__item--discount">
-                    <span class="price-old">$83.40</span>
-                    $39.95 per year
-                    <p class="discount-save">Save 52%*</p>
-                </div>
-                <a href="#" class="btn btn--transparent">SIGN UP</a>
-            </div>
-        </div>
-        <div class="ways-pay">
-            <div class="way-pay__items">
-                <div class="way-pay__item__item">Ways to pay:</div>
-                <div class="way-pay__item__item">
-                    <img src="img/visa.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/master.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/express.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/pay-pal.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/bitcoin.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/ok-pay.png" alt="logo">
-                </div>
-                <div class="way-pay__item__item">
-                    <img src="img/amazon.png" alt="logo">
-                </div>
-            </div>
-            <div class="ways-pay__links">
-                <a href="#" class="ways-pay__links--link">
-                    <span>How to pay anonymously</span>
-                    <svg>
-                        <use xlink:href="img/sprites/sprite.svg#next"></use>
-                    </svg>
-                </a>
-                <a href="#" class="ways-pay__links--link">
-                    <span>REDEEM GIFT CARD</span>
-                    <svg>
-                        <use xlink:href="img/sprites/sprite.svg#next"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="wrapper">
-        <a href="#" class="footer--logo">
-            <h3>Company Name</h3>
-        </a>
-        <div class="footer__items">
-            <div class="footer__items__item">
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">Company</a></li>
-                    <li class="footer--nav--link">About Us<a href="#"></a></li>
-                    <li class="footer--nav--link">Our Team<a href="#"></a></li>
-                    <li class="footer--nav--link">Careers<a href="#"></a></li>
-                    <li class="footer--nav--link">Press<a href="#"></a></li>
-                    <li class="footer--nav--link">In the Media<a href="#"></a></li>
-                    <li class="footer--nav--link">VPN Reviews<a href="#"></a></li>
-                    <li class="footer--nav--link">Companies We Support<a href="#"></a></li>
-                    <li class="footer--nav--link">Contact Us<a href="#"></a></li>
-                    <li class="footer--nav--link">Blog<a href="#"></a></li>
-                </ul>
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">programs</a></li>
-                    <li class="footer--nav--link">Whitehat Security<a href="#"></a></li>
-                    <li class="footer--nav--link">Affiliates<a href="#"></a></li>
-                </ul>
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">learn more</a></li>
-                    <li class="footer--nav--link">VPN Encryption<a href="#"></a></li>
-                    <li class="footer--nav--link">Android VPN App<a href="#"></a></li>
-                    <li class="footer--nav--link">iOS VPN App<a href="#"></a></li>
-                    <li class="footer--nav--link">PIA Sitemap<a href="#"></a></li>
-                </ul>
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">LEGAL</a></li>
-                    <li class="footer--nav--link">Terms Of Service<a href="#"></a></li>
-                    <li class="footer--nav--link">Privacy Policy<a href="#"></a></li>
-                    <li class="footer--nav--link">DMCA Policy<a href="#"></a></li>
-                    <li class="footer--nav--link">Export Control Policy<a href="#"></a></li>
-                </ul>
-            </div>
-            <div class="footer__items__item">
-                <h5>ABOUT</h5>
-                <p>Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN
-                    tunnels which create several layers of privacy and security providing you safety on the internet.
-                    Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.</p>
-                <p>Map data provided by Google.</p>
-                <p>PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights
-                    Reserved.
-                    PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights
-                    Reserved.</p>
-                <p>© London Trust Media, Inc. All Rights Reserved.</p>
-                <h5>SOCIAL</h5>
-                <div class="social-links">
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#f"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#tw"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#google"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#in"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#disc"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#youtube"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+@@include("../blocks/modules/footer/footer.html")
 <!--@@include("../blocks/modules/faq/faq.html")
     @@include("../blocks/modules/modal/modal.html")
     @@include("../blocks/modules/menu/menu.html")

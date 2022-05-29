@@ -3,7 +3,7 @@ let smartgrid = require('smart-grid');
 let settings = {
     outputStyle: 'scss',
     columns: 12,
-    offset: '16px',
+    offset: '10px',
     mobileFirst: false,
     container: {
         maxWidth: '1400px',
@@ -11,7 +11,7 @@ let settings = {
     },
     breakPoints: {
         lm: {
-            width: '1280px',
+            width: '1420px',
             fields: '100px'
         },
         md: {
@@ -20,7 +20,7 @@ let settings = {
         },
         sm: {
             width: '780px',
-            fields: '25px'
+            fields: '20px'
         },
         xxs: {
             width: '375px',

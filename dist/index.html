@@ -27,13 +27,12 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
+
 
 <section class="section-warning">
     <div class="wrapper">
@@ -44,11 +43,13 @@
                 </svg>
                 <span>You are not protected</span>
             </div>
-            <div class="section-warning__items__item">
-                <span>Your IP Address: 107.3.176.194</span>
-            </div>
-            <div class="section-warning__items__item">
-                <span>Your ISP: Comcast Cable</span>
+            <div class="section-warning__items__item section-warning__items__item--text">
+                <div class="section-warning__items__item-1">
+                    <span>Your IP Address: 107.3.176.194</span>
+                </div>
+                <div class="section-warning__items__item-2">
+                    <span>Your ISP: Comcast Cable</span>
+                </div>
             </div>
             <a href="#" class="section-warning__items__item section-warning__items__item--link">
                 <span>Learn More ›</span>
@@ -65,9 +66,46 @@
     <div class="wrapper">
         <div class="header__items">
             <div class="header__items__item logo">
+                <div class="mobile-nav-button">
+                    <div class="mobile-nav-button__line"></div>
+                    <div class="mobile-nav-button__line"></div>
+                    <div class="mobile-nav-button__line"></div>
+                </div>
+                <nav class="mobile-menu">
+                    <ul class="nav-top">
+                        <li class="sub-menu-parent">
+                            <a href="#">WHY US</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub Item 1</a></li>
+                                <li><a href="#">Sub Item 2</a></li>
+                                <li><a href="#">Sub Item 3</a></li>
+                                <li><a href="#">Sub Item 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">VPN APPS</a></li>
+                        <li class="sub-menu-parent">
+                            <a href="#">SUPPORT</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub Item 1</a></li>
+                                <li><a href="#">Sub Item 2</a></li>
+                                <li><a href="#">Sub Item 3</a></li>
+                                <li><a href="#">Sub Item 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-parent">
+                            <a href="#">Resources</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub Item 1</a></li>
+                                <li><a href="#">Sub Item 2</a></li>
+                                <li><a href="#">Sub Item 3</a></li>
+                                <li><a href="#">Sub Item 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
                 <a href="#" class="logo__link"><h1>Company Name</h1></a>
             </div>
-            <div class="header__items__item">
+            <div class="header__items__item header__items__item--nav">
                 <nav>
                     <ul class="nav-top">
                         <li class="sub-menu-parent">
@@ -115,26 +153,40 @@
                 <img src="img/pic.jpg" alt="pic" width="600px" height="400px">
             </div>
             <div class="post__text main-post__text">
-                <h2 class="post__text--title">TV Addons: Legal battle against Canadian media giants demonstrates severe
-                    consequences facing developers accused of copyright infringement
-                </h2>
-                <div class="main-post__text--desc">
+                <a href="#">
+                    <h2 class="post__text--title">TV Addons: Legal battle against Canadian media giants demonstrates severe
+                        consequences facing developers accused of copyright infringement
+                    </h2>
+                </a>
+                <div class="post__text--desc">
                     <div class="name">Danica Sergison</div>
                     <div class="data">JUL 08, 2018</div>
                 </div>
-                <div class="main-post__text--tags">
+                <div class="post__text--tags">
                     <a href="#">Copyright,</a>
                     <a href="#">News,</a>
                     <a href="#">Open Source,</a>
                     <a href="#">Privacy</a>
                 </div>
-                <div class="main-post__text--comments">
+                <div class="post__text--comments">
                     <svg>
                         <use xlink:href="img/sprites/sprite.svg#comment"></use>
                     </svg>
                     <span>0</span>
                 </div>
             </div>
+        </div>
+        <div class="search main-post__search">
+            <label for="search" class="search--label">
+                <svg>
+                    <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+            </label>
+            <input type="text"
+                   name="search"
+                   id="search"
+                   placeholder="Search blog"
+                   class="search--input">
         </div>
     </div>
 </div>
@@ -161,29 +213,31 @@
 <div class="main">
     <div class="wrapper">
         <div class="main__items">
-            <div class="main__items__item">
+            <div class="main__items__item main__items__item--posts">
                 <div class="posts">
-                    <h2>Recent posts</h2>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <h2 class="posts__title">Recent posts</h2>
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-1.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
-                                Broken Promises
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
+                                    Broken Promises
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Derek Zimmer</div>
                                 <div class="data">JUL 25, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Networking,</a>
                                 <a href="#">Open Source,</a>
                                 <a href="#">Privacy,</a>
                                 <a href="#">Security</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -191,18 +245,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-2.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">How to get cheaper flights using a VPN
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">How to get cheaper flights using a VPN
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Jayson</div>
                                 <div class="data">JUL 24, 2018</div>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -210,23 +266,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-3.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Chris Miller</div>
                                 <div class="data">JUL 22, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Net Neutrality,</a>
                                 <a href="#">News</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -234,26 +292,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-1.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
-                                Broken Promises
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and
+                                    Broken Promises
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Derek Zimmer</div>
                                 <div class="data">JUL 25, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Networking,</a>
                                 <a href="#">Open Source,</a>
                                 <a href="#">Privacy,</a>
                                 <a href="#">Security</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -261,18 +321,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-2.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">How to get cheaper flights using a VPN
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">How to get cheaper flights using a VPN
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Jayson</div>
                                 <div class="data">JUL 24, 2018</div>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -280,23 +342,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post posts__item">
-                        <div class="post__image main-post__image">
+                    <div class="post">
+                        <div class="post__image">
                             <img src="img/pic-3.jpg" alt="pic" width="280px" height="180px">
                         </div>
-                        <div class="post__text main-post__text">
-                            <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
-                            </h3>
-                            <div class="main-post__text--desc">
+                        <div class="post__text">
+                            <a href="#">
+                                <h3 class="post__text--title">Net Neutrality was repealed, but the fight is far from over
+                                </h3>
+                            </a>
+                            <div class="post__text--desc">
                                 <div class="name">Chris Miller</div>
                                 <div class="data">JUL 22, 2018</div>
                             </div>
-                            <div class="main-post__text--tags">
+                            <div class="post__text--tags">
                                 <a href="#">Governments,</a>
                                 <a href="#">Net Neutrality,</a>
                                 <a href="#">News</a>
                             </div>
-                            <div class="main-post__text--comments">
+                            <div class="post__text--comments">
                                 <svg>
                                     <use xlink:href="img/sprites/sprite.svg#comment"></use>
                                 </svg>
@@ -307,7 +371,7 @@
                     <a href="#" class="btn btn--transparent">older posts</a>
                 </div>
             </div>
-            <div class="main__items__item">
+            <div class="main__items__item main__items__item--aside">
                 <aside class="aside">
                     <div class="search">
                         <label for="search" class="search--label">
@@ -328,7 +392,7 @@
                             </svg>
                             <h5>Announcements</h5>
                         </div>
-                        <ul class="aside-block--list">
+                        <ul class="aside-block__list">
                             <li class="aside-block__list--item">
                                 <a href="#">Upcoming Changes (Live Chat, Less Censorship, More Access)</a>
                             </li>
@@ -378,14 +442,13 @@
                     </div>
                     <div class="aside__tags">
                         <h5>Tag cloud</h5>
-                        <img src="img/image-tag.jpg" alt="pic" width="324px" height="309px">
+                        <img src="img/image-tags.jpg" alt="pic" width="324px" height="309px">
                     </div>
                 </aside>
             </div>
         </div>
     </div>
-</div>
-<section class="block-stock">
+    <section class="block-stock">
     <div class="wrapper">
         <h2 class="block-stock__title">Sign up today – 7 day money back guarantee</h2>
         <div class="block-stock__items">
@@ -436,39 +499,39 @@
                 <a href="#" class="btn btn--transparent">SIGN UP</a>
             </div>
         </div>
-        <div class="ways-pay">
+        <div class="way-pay">
             <div class="way-pay__items">
-                <div class="way-pay__item__item">Ways to pay:</div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">Ways to pay:</div>
+                <div class="way-pay__items__item">
                     <img src="img/visa.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/master.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/express.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/pay-pal.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/bitcoin.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/ok-pay.png" alt="logo">
                 </div>
-                <div class="way-pay__item__item">
+                <div class="way-pay__items__item">
                     <img src="img/amazon.png" alt="logo">
                 </div>
             </div>
-            <div class="ways-pay__links">
-                <a href="#" class="ways-pay__links--link">
+            <div class="way-pay__links">
+                <a href="#" class="way-pay__links--link">
                     <span>How to pay anonymously</span>
                     <svg>
                         <use xlink:href="img/sprites/sprite.svg#next"></use>
                     </svg>
                 </a>
-                <a href="#" class="ways-pay__links--link">
+                <a href="#" class="way-pay__links--link">
                     <span>REDEEM GIFT CARD</span>
                     <svg>
                         <use xlink:href="img/sprites/sprite.svg#next"></use>
@@ -478,6 +541,7 @@
         </div>
     </div>
 </section>
+</div>
 <footer class="footer">
     <div class="wrapper">
         <a href="#" class="footer--logo">
@@ -486,7 +550,7 @@
         <div class="footer__items">
             <div class="footer__items__item">
                 <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">Company</a></li>
+                    <li class="footer--nav--title"><a href="#"><h5>Company</h5></a></li>
                     <li class="footer--nav--link">About Us<a href="#"></a></li>
                     <li class="footer--nav--link">Our Team<a href="#"></a></li>
                     <li class="footer--nav--link">Careers<a href="#"></a></li>
@@ -497,20 +561,26 @@
                     <li class="footer--nav--link">Contact Us<a href="#"></a></li>
                     <li class="footer--nav--link">Blog<a href="#"></a></li>
                 </ul>
+                <div class="footer--nav">
+                    <ul class="">
+                        <li class="footer--nav--title"><a href="#"><h5>programs</h5></a></li>
+                        <li class="footer--nav--link">Whitehat Security<a href="#"></a></li>
+                        <li class="footer--nav--link">Affiliates<a href="#"></a></li>
+                    </ul>
+                    <ul class="">
+                        <li class="footer--nav--title"><a href="#"><h5>
+                            learn more
+                        </h5></a></li>
+                        <li class="footer--nav--link">VPN Encryption<a href="#"></a></li>
+                        <li class="footer--nav--link">Android VPN App<a href="#"></a></li>
+                        <li class="footer--nav--link">iOS VPN App<a href="#"></a></li>
+                        <li class="footer--nav--link">PIA Sitemap<a href="#"></a></li>
+                    </ul>
+                </div>
                 <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">programs</a></li>
-                    <li class="footer--nav--link">Whitehat Security<a href="#"></a></li>
-                    <li class="footer--nav--link">Affiliates<a href="#"></a></li>
-                </ul>
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">learn more</a></li>
-                    <li class="footer--nav--link">VPN Encryption<a href="#"></a></li>
-                    <li class="footer--nav--link">Android VPN App<a href="#"></a></li>
-                    <li class="footer--nav--link">iOS VPN App<a href="#"></a></li>
-                    <li class="footer--nav--link">PIA Sitemap<a href="#"></a></li>
-                </ul>
-                <ul class="footer--nav">
-                    <li class="footer--nav--title"><a href="#">LEGAL</a></li>
+                    <li class="footer--nav--title"><a href="#">
+                        <h5>LEGAL</h5>
+                    </a></li>
                     <li class="footer--nav--link">Terms Of Service<a href="#"></a></li>
                     <li class="footer--nav--link">Privacy Policy<a href="#"></a></li>
                     <li class="footer--nav--link">DMCA Policy<a href="#"></a></li>
@@ -518,7 +588,7 @@
                 </ul>
             </div>
             <div class="footer__items__item">
-                <h5>ABOUT</h5>
+                <h5 class="footer--nav--title">ABOUT</h5>
                 <p>Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN
                     tunnels which create several layers of privacy and security providing you safety on the internet.
                     Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.</p>
@@ -528,38 +598,40 @@
                     PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights
                     Reserved.</p>
                 <p>© London Trust Media, Inc. All Rights Reserved.</p>
-                <h5>SOCIAL</h5>
-                <div class="social-links">
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#f"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#tw"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#google"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#in"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#disc"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg>
-                            <use xlink:href="img/sprites/sprite.svg#youtube"></use>
-                        </svg>
-                    </a>
+                <div class="social">
+                    <h5>SOCIAL</h5>
+                    <div class="social-links">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#f"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#tw"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#google"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#in"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#disc"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

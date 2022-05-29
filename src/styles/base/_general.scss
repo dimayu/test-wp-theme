@@ -44,3 +44,20 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+svg,
+svg path,
+a,
+button,
+input,
+select,
+div,
+img,
+i,
+textarea,
+h3,
+h1,
+h2,
+option {
+    transition: 0.6s;
+}
